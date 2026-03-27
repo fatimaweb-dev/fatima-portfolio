@@ -45,14 +45,13 @@ section {
 }
 /* Container */
 .container {
-  height: auto;
   width: 100%;
 }
 /* Section Title */
 .section-title {
   font-size: 1.5rem;
-  margin-bottom: 40px;
   text-align: center;
+  margin-bottom: 40px;
 }
 /* Logo */
 .logo {
@@ -159,7 +158,6 @@ section {
   grid-template-columns: 1fr;
   gap: 40px;
   align-items: center;
-  margin-top: 40px;
 }
 
 .about-text p {
@@ -187,9 +185,8 @@ section {
 /* Skills Section */
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: 1fr;
   gap: 25px;
-  margin-top: 40px;
 }
 
 .skill-card {
@@ -219,9 +216,8 @@ section {
 /* Project Section */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: 1fr;
   gap: 30px;
-  margin-top: 40px;
 }
 
 .project-card {
@@ -293,9 +289,8 @@ section {
 /* Services Section */
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: 1fr;
   gap: 30px;
-  margin-top: 40px;
 }
 
 .service-card {
@@ -351,12 +346,13 @@ section {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  max-width: 500px;
+  max-width: 600px;
   margin: 0 auto 20px auto;
 }
 
 .contact-form input,
 .contact-form textarea {
+  width: 100%;
   padding: 12px 15px;
   border-radius: 6px;
   border: none;
@@ -397,7 +393,6 @@ section {
 
 /* Footer */
 .footer {
-  margin-top: 40px;
   background: #1f2933;
   padding: 40px 20px;
   text-align: center;
@@ -456,7 +451,6 @@ section {
   }
   .container {
     max-width: 1000px;
-    margin: 0 auto;
     width: 100%;
   }
   .hero h1 {
@@ -470,7 +464,7 @@ section {
     font-size: 2rem;
   }
   section {
-    padding: 80px 40px;
+    padding: 60px 40px;
   }
   .hero {
     padding: 100px 40px;
@@ -483,6 +477,9 @@ section {
   .about-container {
     grid-template-columns: 2fr 1fr;
   }
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 /* Desktop Styles */
 @media (min-width: 1024px) {
@@ -492,10 +489,9 @@ section {
   .container {
     max-width: 1200px;
     width: 100%;
-    padding: 0;
   }
   section {
-    padding: 100px 60px;
+    padding: 80px 60px;
   }
   .hero h1 {
     font-size: 4rem;
@@ -516,7 +512,13 @@ section {
   .services-grid {
     gap: 30px;
   }
-  .about-container {
-    grid-template-columns: 2fr 1fr;
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .contact-form {
+    max-width: 700px;
   }
 }
